@@ -16,31 +16,31 @@
   </div>
 </div>
 
-
 <style>
-.locais-container {
-  display: flex;
-  flex-direction: column;
+  .local-item {
+  display: grid;
+  grid-template-columns: 1fr; /* padrão: celular */
   gap: 15px;
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
-.local-item {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 12px;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  cursor: pointer;
+/* Tablet: 2 colunas */
+@media (min-width: 600px) {
+  .local-item {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
-.local-item img {
-  width: 60px;
-  height: 60px;
-  border-radius: 8px;
-  object-fit: cover;
+/* Desktop: 3 colunas */
+@media (min-width: 900px) {
+  .local-item {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
 }
 
+/* Modal (mantive o que você já tinha) */
 .modal {
   position: fixed;
   top: 0;

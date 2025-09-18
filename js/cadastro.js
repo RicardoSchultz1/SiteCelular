@@ -36,7 +36,7 @@ form.addEventListener("submit", async (e) => {
     if (error) throw error;
 
     msg.style.color = "green";
-    msg.textContent = "Conta criada! Verifique seu e-mail para confirmar.";
+    msg.textContent = "Conta criada.";
     form.reset();
   } catch (err) {
     msg.style.color = "red";

@@ -109,3 +109,67 @@
   border-radius:10px;
   text-align:center;
 }
+/* ====== ====== ====== ====== ====== Locais*/
+
+/* ====== ====== ====== ====== ====== navbar*/
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #1e1e1e;
+  color: white;
+  padding: 10px 20px;
+  position: relative;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 20px;
+  display: flex;  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  height: 80px;
+}
+
+.logo span {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+}
+.user-menu {
+  position: relative;
+  cursor: pointer;
+}
+
+.user-menu span {
+  font-size: 24px;
+}
+
+.dropdown {
+  position: absolute;
+  right: 0;
+  top: 30px;
+  background: white;
+  color: black;
+  border-radius: 5px;
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+  min-width: 150px;
+  text-align: left;
+}
+
+.dropdown a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: black;
+}
+
+.dropdown a:hover {
+  background: #f0f0f0;
+}
+
+.hidden {
+  display: none;
+}

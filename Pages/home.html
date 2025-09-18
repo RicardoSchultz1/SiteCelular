@@ -1,0 +1,18 @@
+<h1>Bem-vindo!</h1>
+<div id="dados"></div>
+<script>
+  // Exemplo de fetch no Supabase
+  async function buscarDados() {
+    const { createClient } = supabase;
+    const supa = createClient("https://YOUR-PROJECT.supabase.co", "YOUR-ANON-KEY");
+
+    let { data, error } = await supa.from("clientes").select("*");
+    if (error) {
+      document.getElementById("dados").innerText = "Erro: " + error.message;
+    } else {
+      document.getElementById("dados").innerHTML = data.map(c => `<p>${c.nome}</p>`).join("");
+    }
+  }
+
+  buscarDados();
+</script>

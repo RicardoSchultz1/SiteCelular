@@ -1,0 +1,77 @@
+<div id="perfil-container">
+  <h2>Meu Perfil</h2>
+  
+  <div class="perfil-actions">
+    <button class="perfil-btn" data-action="email">Alterar E-mail</button>
+    <button class="perfil-btn" data-action="senha">Alterar Senha</button>
+    <button class="perfil-btn" data-action="excluir">Excluir Conta</button>
+  </div>
+
+  <form id="form-email" class="perfil-form hidden">
+    <input type="email" id="novoEmail" placeholder="Novo e-mail" required>
+    <button type="button" id="btnAtualizarEmail">Atualizar E-mail</button>
+  </form>
+
+  <form id="form-senha" class="perfil-form hidden">
+    <input type="password" id="novaSenha" placeholder="Nova senha" required>
+    <input type="password" id="confirmaSenha" placeholder="Confirme a senha" required>
+    <button type="button" id="btnAtualizarSenha">Atualizar Senha</button>
+  </form>
+</div>
+
+<style>
+.perfil {
+  padding: 20px;
+}
+
+.perfil-opcoes {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.perfil-btn {
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: #1e1e1e;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.perfil-btn.excluir {
+  background: #d9534f;
+}
+
+.perfil-btn:hover {
+  opacity: 0.9;
+}
+
+.perfil-form {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.perfil-form input {
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.perfil-form button {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+</style>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Cadastro</title>
+</head>
+<body>
+  <header class="banner">
+    <h1>Crie sua Conta</h1>
+  </header>
+
+  <main class="form-container">
+    <form id="cadastroForm">
+  <input type="email" id="email" placeholder="Digite seu email" />
+  <input type="password" id="senha" placeholder="Digite sua senha" />
+  <input type="password" id="confirmaSenha" placeholder="Confirme sua senha" />
+  <button type="submit">Criar conta</button>
+  <p id="mensagem"></p>
+</form>
+
+<!-- SDK do Supabase -->
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+<script src="js/cadastro.js"></script>
+
+  </main>
+
+</body>
+</html>
+<style>
+    body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f9f9f9;
+}
+
+.banner {
+  background: #1e1e1e;
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.form-container {
+  max-width: 400px;
+  margin: 40px auto;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-top: 15px;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  margin-top: 20px;
+  padding: 12px;
+  font-size: 16px;
+  background: #1e1e1e;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #333;
+}
+
+#mensagem {
+  margin-top: 15px;
+  text-align: center;
+  font-weight: bold;
+}
+
+</style>

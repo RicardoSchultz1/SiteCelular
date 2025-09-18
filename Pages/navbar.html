@@ -1,0 +1,67 @@
+<nav class="navbar">
+  <div class="logo">MinhaLogo</div>
+  <div class="user-menu">
+    <span id="userToggle">Olá ▾</span>
+    <div id="dropdown" class="dropdown hidden">
+      <a href="login.html" id="logout">Sair</a>
+    </div>
+  </div>
+</nav>
+
+<style>
+    body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #1e1e1e;
+  color: white;
+  padding: 10px 20px;
+  position: relative;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.user-menu {
+  position: relative;
+  cursor: pointer;
+}
+
+.user-menu span {
+  font-size: 16px;
+}
+
+.dropdown {
+  position: absolute;
+  right: 0;
+  top: 30px;
+  background: white;
+  color: black;
+  border-radius: 5px;
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+  min-width: 100px;
+  text-align: left;
+}
+
+.dropdown a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: black;
+}
+
+.dropdown a:hover {
+  background: #f0f0f0;
+}
+
+.hidden {
+  display: none;
+}
+</style>

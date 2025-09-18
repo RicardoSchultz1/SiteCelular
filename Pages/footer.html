@@ -1,0 +1,76 @@
+<footer class="footer">
+  <div class="footer-item" data-func="carregarHome">
+    <span class="icon">🏠</span>
+    <span>Home</span>
+  </div>
+  <div class="footer-item" data-func="carregarLocais">
+    <span class="icon">🗺️</span>
+    <span>Locais</span>
+  </div>
+  <div class="footer-item" data-func="carregarRanking">
+    <span class="icon">⭐</span>
+    <span>Ranking</span>
+  </div>
+  <div class="footer-item" data-func="carregarPerfil">
+    <span class="icon">👤</span>
+    <span>Perfil</span>
+  </div>
+</footer>
+
+<style>
+  /* container dos locais */
+.locais-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); 
+  gap: 15px;
+  padding: 15px;
+}
+
+/* cada local */
+.local-item {
+  background: #2a2a2a;
+  color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: center;
+  padding: 10px;
+  transition: transform 0.2s ease;
+}
+
+.local-item img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.local-item:hover {
+  transform: scale(1.03);
+  cursor: pointer;
+}
+
+/* --- RESPONSIVIDADE --- */
+
+/* No celular: só 1 item por linha */
+@media (max-width: 600px) {
+  .locais-container {
+    grid-template-columns: 1fr; /* força apenas 1 coluna */
+  }
+}
+
+/* Em tablets: até 2 itens por linha */
+@media (min-width: 601px) and (max-width: 900px) {
+  .locais-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Em desktops grandes: 3+ itens */
+@media (min-width: 901px) {
+  .locais-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+
+</style>

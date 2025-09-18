@@ -1,0 +1,79 @@
+<div id="locais-list" class="locais-container"></div>
+
+<div id="avaliacao-modal" class="modal hidden">
+  <div class="modal-content">
+    <span id="close-modal">&times;</span>
+    <h2>Avaliar Local</h2>
+    <p id="local-nome"></p>
+    <div class="stars">
+      <span data-value="1">⭐</span>
+      <span data-value="2">⭐</span>
+      <span data-value="3">⭐</span>
+      <span data-value="4">⭐</span>
+      <span data-value="5">⭐</span>
+    </div>
+    <button id="confirmar-avaliacao">Confirmar</button>
+  </div>
+</div>
+
+
+<style>
+.locais-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.local-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.local-item img {
+  width: 60px;
+  height: 60px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal.hidden {
+  display: none;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 350px;
+  text-align: center;
+}
+
+.stars span {
+  font-size: 28px;
+  cursor: pointer;
+  margin: 5px;
+  transition: transform 0.2s;
+}
+
+.stars span:hover {
+  transform: scale(1.2);
+}
+</style>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Login</title>
+</head>
+<body>
+    <header class="banner">
+        <h1>Bem-vindo de volta</h1>
+    </header>
+
+    <main class="form-container">
+    <form id="loginForm">
+        <label for="email">E-mail</label>
+        <input type="email" id="email" required>
+
+        <label for="senha">Senha</label>
+        <input type="password" id="senha" required>
+
+        <button type="submit">Entrar</button>
+    </form>
+
+    <!-- Link para cadastro -->
+    <p class="cadastro-link">
+        Não tem uma conta? <a href="cadastro.html">Crie aqui</a>
+    </p>
+
+    <p id="mensagem"></p>
+</main>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+    <script src="js/db.js"></script>
+     <script src="js/login.js"></script>
+</body>
+</html>
+
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f9f9f9;
+}
+
+.banner {
+  background: #1e1e1e;
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.form-container {
+  max-width: 400px;
+  margin: 40px auto;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-top: 15px;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  margin-top: 20px;
+  padding: 12px;
+  font-size: 16px;
+  background: #1e1e1e;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #333;
+}
+
+#mensagem {
+  margin-top: 15px;
+  text-align: center;
+  font-weight: bold;
+}
+
+    .cadastro-link {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.cadastro-link a {
+  color: #1e1e1e;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.cadastro-link a:hover {
+  text-decoration: underline;
+}
+
+</style>

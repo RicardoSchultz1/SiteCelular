@@ -7,12 +7,14 @@
 .ranking-container {
   padding: 20px;
   text-align: center;
+  max-width: 600px; 
+  margin: 0 auto;
 }
 
 .ranking-item {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   background: #f9f9f9;
   padding: 10px 15px;
   margin: 8px 0;
@@ -23,16 +25,30 @@
 .posicao {
   font-weight: bold;
   color: #ff9800;
+  width: 40px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.ranking-item img {
+  width: 50px;
+  height: 50px;
+  border-radius: 8px;
+  object-fit: cover;
+  margin: 0 10px;
+  flex-shrink: 0;
 }
 
 .nome {
   flex: 1;
   text-align: left;
-  margin-left: 10px;
 }
 
 .nota {
   font-weight: bold;
   color: #4caf50;
+  margin-left: 10px;
+  flex-shrink: 0;
 }
+
 </style>
